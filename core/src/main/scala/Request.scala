@@ -1,5 +1,5 @@
 package ru.intfox.jsonrpc4cats
 
-class Request(jsonrpc: String) {
+import io.circe.Json
 
-}
+case class Request(jsonrpc: String, method: String, params: Option[Json], id: Option[Long])
